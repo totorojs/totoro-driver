@@ -23,7 +23,7 @@ commander
   .on('--help', function() {
     console.log(colorful.green('  Examples:'))
     console.log('    $ totoro-driver -b=chrome,firefox')
-    console.log('    $ totoro-driver -b=chrome,firefox -s server.totorojs.org:9999/__labor')
+    console.log('    $ totoro-driver -b=chrome,firefox -s server.totorojs.org:9999')
     console.log()
   })
   .helpInformation = utilx.cGetHelp(pkg)
