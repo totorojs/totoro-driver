@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var path = require('path')
+var commander = require('commander')
+var colorful = require('colorful')
+var utilx = require('utilx')
+
+var pkg = require('../package')
+var Driver = require('../lib/')
+
+
+commander
+  .description(pkg.description)
+  .option('-v, --version', 'output version number')
+  .option('-b, --browsers <s>', 'browsers to open', utilx.split)
+  .option('-s, --server <s>', 'totoro test server')
+  .option('-d, --debug', 'show debug log')
+  .on('version', function() {
+    console.log('\n  ' + colorful.cyan(pkg.version) + '\n')
+    process.exit(0)
+  })
+  .on('--help', function() {
+    console.log(colorful.green('  Examples:'))
+    console.log('    $ totoro-driver -b=chrome,firefox')
+    console.log('    $ totoro-driver -b=chrome,firefox -s server.totorojs.org:9999/__labor')
+    console.log()
+  })
+  .helpInformation = utilx.cGetHelp(pkg)
+
+commander.parse(process.argv)
+ 
+new Driver(utilx.cGetCfg(commander))
+
+
+
+
+
+

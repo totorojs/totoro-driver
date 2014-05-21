@@ -1,0 +1,32 @@
+{
+  "name": "totoro-driver",
+  "version": "0.1.0",
+  "description": "Node browser driver for totoro.",
+  "homepage": "https://github.com/totorojs/totoro-driver",
+  "bugs": {"url": "https://github.com/totorojs/totoro-driver/issues"},
+
+  "keywords": ["browser","driver", "totoro"],
+
+  "author": "fool2fish <fool2fish@gmail.com>",
+  "dependencies": {
+    "utilx": "0.0.5",
+    "tracer": "0.6.1",
+    "socket.io-client": "0.9.16",
+    "colorful": "2.1.0",
+    "commander": "1.2.0",
+    "browsers": "1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.3.0"
+  },
+
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/totorojs/totoro-driver.git"
+  },
+  "bin": {
+    "totoro-driver":"./bin/index"
+  },
+  "preferGlobal":true
+}
