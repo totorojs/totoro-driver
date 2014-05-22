@@ -44,7 +44,7 @@ npm install -g
 Link to totoro test server, and tell it a new availble chrome.
 
 ```
-$ browsers --server server.totorojs.org:9999 --browsers chrome
+$ totoro-driver --server server.totorojs.org:9999 --browsers chrome
 ```
 
 ## 3. Cli Options
