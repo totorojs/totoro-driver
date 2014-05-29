@@ -1,6 +1,6 @@
 {
   "name": "totoro-driver",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Node browser driver for totoro.",
   "homepage": "https://github.com/totorojs/totoro-driver",
   "bugs": {"url": "https://github.com/totorojs/totoro-driver/issues"},
