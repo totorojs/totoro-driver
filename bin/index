@@ -14,7 +14,7 @@ commander
   .description(pkg.description)
   .option('-v, --version', 'output version number')
   .option('-b, --browsers <s>', 'browsers to open', utilx.split)
-  .option('-s, --server <s>', 'totoro test server')
+  .option('-s, --server <s>', 'url of totoro server')
   .option('-d, --debug', 'show debug log')
   .on('version', function() {
     console.log('\n  ' + colorful.cyan(pkg.version) + '\n')
@@ -22,6 +22,7 @@ commander
   })
   .on('--help', function() {
     console.log(colorful.green('  Examples:'))
+    console.log('    $ totoro-driver')
     console.log('    $ totoro-driver -b=chrome,firefox')
     console.log('    $ totoro-driver -b=chrome,firefox -s server.totorojs.org:9999')
     console.log()
